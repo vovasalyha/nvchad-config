@@ -15,6 +15,12 @@ map("i", "<C-;>", "<Right>", { desc = "move right" })
 map("i", "<C-k>", "<Down>", { desc = "move down" })
 map("i", "<C-l>", "<Up>", { desc = "move up" })
 
+-- Movement remapping for operation pending mode
+map("o", "j", "h", { noremap = true, silent = true })
+map("o", "k", "j", { noremap = true, silent = true })
+map("o", "l", "k", { noremap = true, silent = true })
+map("o", ";", "l", { noremap = true, silent = true })
+
 map({ "n", "v" }, "j", "<Left>", { desc = "move left" })
 map({ "n", "v" }, ";", "<Right>", { desc = "move right" })
 map({ "n", "v" }, "k", "<Down>", { desc = "move down" })
