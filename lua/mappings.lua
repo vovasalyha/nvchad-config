@@ -93,3 +93,8 @@ map({ "n", "t" }, "<A-i>", function()
     },
   }
 end, { desc = "Toggle Floating Terminal" })
+
+-- Map <leader>tg to run 'templ generate'
+map("n", "<leader>tg", function()
+  vim.cmd "!templ generate"
+end, { desc = "Run templ generate" })
