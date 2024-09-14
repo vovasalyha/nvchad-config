@@ -31,6 +31,12 @@ map("n", "<C-;>", "<C-w>l", { desc = "switch window right" })
 map("n", "<C-k>", "<C-w>j", { desc = "switch window down" })
 map("n", "<C-l>", "<C-w>k", { desc = "switch window up" })
 
+-- prevent 'd', 'dd', 'c', 'cc' from yanking into the unnamed register
+map({ "n", "v", "o" }, "d", '"_d', { desc = "Delete without yanking" })
+map({ "n", "v", "o" }, "c", '"_c', { desc = "Change without yanking" })
+map("n", "dd", '"_dd', { desc = "Delete line without yanking" })
+map("n", "cc", '"_cc', { desc = "Change line without yanking" })
+
 -- Remap ',' for moving forward to the next occurrence
 map("n", ",", ";", { desc = "Move forward to next occurrence" })
 
