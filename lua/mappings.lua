@@ -1,4 +1,5 @@
 require "nvchad.mappings"
+-- require "actions-preview"
 
 -- add yours here
 
@@ -78,6 +79,9 @@ map("n", "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = 
 map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "Find help tags" })
 map("n", "<leader>fs", "<cmd>Telescope lsp_document_symbols<CR>", { desc = "Find symbols in current file" })
 map("n", "<leader>fw", "<cmd>Telescope lsp_workspace_symbols query=<CR>", { desc = "Find symbols in workspace" })
+
+-- Telescope LSP actions
+map({ "n", "v" }, "ga", require("actions-preview").code_actions, { desc = "Code actions preview" })
 
 -- Toggle floating terminal + config
 map({ "n", "t" }, "<A-i>", function()

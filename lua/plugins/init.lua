@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre',
+    event = "BufWritePre",
     opts = require "configs.conform",
   },
 
@@ -22,4 +22,13 @@ return {
   -- 		},
   -- 	},
   -- },
+
+  {
+    "aznhe21/actions-preview.nvim",
+    config = function()
+      require("actions-preview").setup {
+        -- Custom configuration options go here (if needed)
+      }
+    end,
+  },
 }
